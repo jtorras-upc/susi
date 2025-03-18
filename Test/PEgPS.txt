@@ -1,0 +1,25 @@
+system_name,PEgPS
+box,Lx 90 A,Ly 90 A,Lz 90 A
+periodical_coordinates,N
+retries,10
+minimum_distance, 1. A
+maximum_deviation, 20
+path_prepi,prepis/Monomers
+molecules_number, 1
+44 PE
+crosslinks,12
+bond_length_CL_start, 1.5 A
+bond_length_CL_close, 1.5 A
+distortion_angle, 45
+[C1,H3:graft,null] 9 PS, PST
+[C1,H2:graft,null] 9 PS, PST
+[C1,H3:graft,null] 9 PS, PST
+[C1,H2:graft,null] 9 PS, PST
+[C1,H3:graft,null] 9 PS, PST
+[C1,H2:graft,null] 9 PS, PST
+[C1,H3:graft,null] 9 PS, PST
+[C1,H2:graft,null] 9 PS, PST
+[C1,H3:graft,null] 9 PS, PST
+[C1,H2:graft,null] 9 PS, PST
+[C1,H3:graft,null] 9 PS, PST
+[C1,H2:graft,null] 9 PS, PST

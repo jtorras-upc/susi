@@ -1,0 +1,25 @@
+system_name,PE_Dendri
+box,Lx 90 A,Ly 90 A,Lz 90 A
+periodical_coordinates,N
+retries,20
+minimum_distance, 1.4 A
+maximum_deviation, 20
+path_prepi,prepis/Monomers
+molecules_number, 1
+PE
+crosslinks,12
+bond_length_CL_start, 1.6 A
+bond_length_CL_close, 1.8 A
+distortion_angle, 45
+[C1,H2:graft,dendron] 1 PEB
+[C1,H3:graft,dendron] 1 PEB
+[C2,H4:graft,dendron] 1 PEB
+[C2,H5:graft,dendron] 1 PEB
+[Cb,H4:graft,dendron] 1 PEC
+[Cb,H5:graft,dendron] 1 PEC
+[Cb,H4:graft,dendron] 1 PEC
+[Cb,H5:graft,dendron] 1 PEC
+[Cb,H4:graft,dendron] 1 PEC
+[Cb,H5:graft,dendron] 1 PEC
+[Cb,H4:graft,dendron] 1 PEC
+[Cb,H5:graft,dendron] 1 PEC

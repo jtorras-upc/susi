@@ -1,0 +1,28 @@
+system_name,PE
+box,Lx 48 A,Ly 48 A,Lz 48 A
+periodical_coordinates,N
+retries,10
+minimum_distance, 1.3 A
+maximum_deviation, 10
+path_prepi,prepis/Monomers
+molecules_number,20
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET

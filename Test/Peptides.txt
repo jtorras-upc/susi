@@ -1,0 +1,14 @@
+system_name,Peptides
+box,Lx 50 A,Ly 50 A,Lz 50 A
+periodical_coordinates,N
+retries,10
+minimum_distance, 1.3 A
+maximum_deviation, 5
+path_prepi,prepis/AminoAcids
+molecules_number,6
+ALA,GLY,GLU,ILE
+GLY,ALA,ILE,LEU,SER
+GLU,ILE,LEU,LEU,GLU
+SER,ALA,GLY,LEU
+ILE,ALA,GLU,GLY
+LEU,ILE,LEU,ILE

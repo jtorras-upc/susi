@@ -1,0 +1,10 @@
+system_name,ALA_2GLY
+box,Lx 10 A,Ly 10 A,Lz 10 A
+periodical_coordinates,N
+retries,10
+minimum_distance, 1.3 A
+maximum_deviation, 5
+path_prepi,prepis/AminoAcids
+molecules_number,2
+2 ALA
+GLY, GLY

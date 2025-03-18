@@ -1,0 +1,59 @@
+system_name,XLPE
+box,Lx 60 A,Ly 60 A,Lz 60 A
+periodical_coordinates,N
+retries,5
+minimum_distance, 1.3 A
+maximum_deviation, 15
+path_prepi,prepis/XLPE
+molecules_number, 40
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+PEH, 20 PE, PET
+crosslinks,7
+bond_length_CL_start, 1.5 A
+bond_length_CL_close, 1.5 A
+distortion_angle, 45
+[C1,H2:C1,H2] PE, SOS, PE
+[C1,H2:C1,H2] PE, SOS, PE
+[C1,H2:C1,H2] PE, SOS, PE
+[C1,H2:C1,H2] PE, SOS, PE
+[C1,H2:C1,H2] PE, SOS, PE
+[C1,H2:C1,H2] PE, SOS, PE
+[C1,H2:C1,H2] PE, SOS, PE
