@@ -1,0 +1,229 @@
+#########################################################################
+#
+#                          ---  SuSi   ---                          
+#
+#                       Structure Simulation                        
+#                                                                   
+#           Copyright (C) 2025                                      
+#                                                                   
+#           David Naranjo        david.alejandro.naranjo@upc.edu    
+#           Carlos Alemán        carlos.aleman@upc.edu              
+#           Juan Torras          joan.torras@upc.edu                
+#                                                                   
+#########################################################################
+#     This file is part of SuSi.
+#
+# SuSi is free software: you can redistribute it and/or modify it under 
+# the terms of the GNU General Public License as published by the Free 
+# Software Foundation, either version 3 of the License, or (at your 
+# option) any later version.
+#
+# SuSi is distributed in the hope that it will be useful, but WITHOUT 
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
+# for more details.
+#
+# You should have received a copy of the GNU General Public License 
+# along with SuSi. If not, see <https://www.gnu.org/licenses/>. 
+#
+# Neither the names of the EEBE, the Universitat Politecnica de 
+# Catalunya, nor the names of any of the copyright holders of SuSi may 
+# be used to endorse or promote any products derived from this Software 
+# without specific, prior, written permission. 
+#########################################################################
+
+This is the README file of SuSi program
+
+Prerequisites
+=============
+SuSi runs directly in the terminal of any Linux-based system and does not 
+require installation. However, you must have Python installed (minimum 
+version of 3.11.4) and verify it by running the following command in the 
+terminal: 
+
+python --version 
+
+SuSi requires the NumPy library. If it is not installed, you can install 
+it with: 
+
+pip install numpy 
+
+Once these requirements are met, users can start using SuSi to build 
+polymeric Systems structures. 
+
+
+Files
+=====
+NOTE: This list is not intended to be comprehensive, but rather to briefly 
+describe some of the key files included with SuSi.
+
+* README          This current file
+
+* Susi.py         Python script to run the SuSi program.
+
+* SuSiManual.pdf  Program user manual.
+
+* COPYING         GNU General Public License 3 (GPL).
+
+* /test           A directory that contains input files 
+                  with examples to build polymer matrices
+
+* /prepis         A directory that contains monomers in PREPI  
+                  format used in the provided examples.
+
+* /susi           A directory that contains Python the modules 
+                  necessary to run SuSi.
+
+
+Running SuSi
+============
+To execute SuSi, ensure the following files are properly placed in the 
+SuSi directory: 
+
+1. The input file containing the system's specifications. 
+2. The PREPI files required for the simulation. These files can either
+   be located in the same directory as SuSi or organized within their 
+   subdirectory (according to what has been defined in the input file). 
+
+Once the files are correctly positioned, run the program using the following 
+command: 
+
+python3 susy.py -f <input> 
+
+Replace <input> with the name of your input file. 
+
+
+Execution Modes and Verbosity Levels 
+====================================
+SuSi can be executed in two distinct modes and two levels of verbosity. 
+These options provide flexibility in how the program runs and how much 
+information it outputs during execution. To view detailed information 
+about these modes and verbosity levels, use the help command:
+ 
+python3 susy.py -h 
+
+This command will display all available options and their descriptions: 
+
+usage: susi.py [-h] [-t] [-v] -f FILE [-r RESTART]
+
+options:
+  -h, --help                   Show this help message and exit
+  -t, --testmode               Activate test mode, file.pdb won't be created
+  -v, --verbosity              Increase output verbosity
+  -f FILE, --file FILE         Input file with system properties
+  -r RESTART,--restart RESTART Restart file
+
+When the program is executed in test mode, no pdb file will be generated at 
+the end of the process. All the information about the system will be shown 
+on the terminal. 
+
+
+Input file description
+======================
+All keywords has to be written in lower case
+Syntax: KEYWORD,value [UNITS]
+
+
+KEYWORDS:
+======================
+
+• System name: This is a short text with the name of the system and the resulting file.
+
+	Example. Build a system where the resulting file will be PolyethyleneBox.pdb.
+	
+	system_name,PolyethyleneBox
+
+• Box: The dimensions of the box are specified as Lx n A, Ly n A, Lz n A.
+
+	Example. Build a system in a prismatic box of 35x50x75.5 A3
+	
+	box,Lx 35 A,Ly 50 A,Lz 75.5 A
+
+• Periodical coordinates: The user can generate the systems inside a periodical simulation box by specifying Y or N.
+
+	Example. Build a system in a non-periodical box.
+	
+	periodical_coordinates,N
+	
+• Retries: The maximum number of retries to attempt placing a residue and a molecule inside the box. 
+
+	Example. Set the program to make a maximum of 10 attempts to place each residue and each molecule recursively.
+	
+	retries, 10
+
+• Minimum distance: All atoms that are closer than this value will be detected as colliders
+
+	Example. Set that any atom located at a distance less than 1.5 Å of another will be a collision.
+
+	minimum_distance, 1.5 A
+
+• Maximum deviation: The maximum percentage deviation to deform a residue due to a collision. 
+
+	Example. Set a random deformation in the structural parameters of the residue within ± 10% of their original values.
+	
+	maximum_deviation, 10
+
+• Prepis path: Directory where all the prepi files used in the system are located.
+
+	Example. Set the program to look for all the prepi files in the directory prepis/PE. 
+	
+	path_prepi,prepis/PE
+
+• Number of molecules: The total number of linear chains in the system.
+
+	Example. Create a system with four linear chains.
+	
+	molecules_number,4
+
+• Molecule lines definition: Each linear chain must be defined on a single line.
+
+	Example. Different ways to define four linear chains of polyethylene containing 12 repeating units. 
+	
+	PEH, PEB, PEB, PEB, PEB, PEB, PEB, PEB, PEB, PEB, PEB, PET
+	PEH, 10 PEB, PET
+	PEH, 5 PEB, 5 PEB, PET
+	PEH, 3 PEB, PEB, PEB, PEB, PEB, 3 PEB, PET
+======================
+Systems with crosslinks require the following additional parameters:
+======================
+• Crosslinks: The total number of crosslink molecules in the system. 
+
+	Example. Create a system with five crosslinks.
+
+	crosslinks,5
+
+• Starting atom bond length: The distance in angstroms between the first atom of the backbone of the crosslink molecule and the starting atom found in a linear chain of the system.
+
+	Example. Set the starting atom bond length to 1.5 Å.
+
+	bond_length_CL_start, 1.5 A
+
+• Closing atom bond length: The distance in angstroms between the last atom of the backbone of the crosslink molecule and the closing atom found in a linear chain of the system.
+
+	Example. Set the closing atom bond length to 1.5 Å.
+	
+	bond_length_CL_close, 1.5 A
+
+• Distortion angle: The maximum angle in degrees a crosslink residue can be rotated to find a new closing atom. 
+
+	Example. Set the distortion angle to 30º.
+	
+	distortion_angle, 30
+
+• Crosslink lines definition: Each crosslink molecule must be defined on a single line.The way of defining a crosslink line is: 
+	[starting atom name, removable atoms: closing atom name, removable atoms] sequence. 
+	The names of the starting and closing atoms are identified using the same nomenclature as the corresponding entries in the prepi file, (column 2)
+
+	The removable atoms to maintain the consistency of the chemical bond can be specified in three different ways: 
+
+        ◦ a) specifying the name of the atom as for starting and closing atoms; 
+        ◦ b) setting that all non-M type atoms bonded to the starting or closing atom are removed by writing the keyword branch;
+        ◦ c) setting that removing any atom is unnecessary by writing the keyword null. 
+
+	The residue sequence is then defined as for linear chains. 
+
+	Example. Create a crosslink made of 20 PEB  units. The first residue of the crosslink is bonded to any C1 atom of the linear chains.  
+	The last residue of the crosslink is bonded to any C2 atom of the linear chains. 
+	To keep the chemical consistency, remove H1 atom bonded to C1 atom and H2 atom bonded to C2 atoms.
+	
+	[C1,H1:C2,H2] 20 PEB
