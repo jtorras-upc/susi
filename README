@@ -4,35 +4,25 @@
 #
 #                       Structure Simulation                        
 #                                                                   
-#           Copyright (C) 2025                                      
+#                        Copyright (C) 2025                                      
 #                                                                   
-#           David Naranjo        david.alejandro.naranjo@upc.edu    
-#           Carlos Alemán        carlos.aleman@upc.edu              
-#           Juan Torras          joan.torras@upc.edu                
-#                                                                   
-#########################################################################
-#     This file is part of SuSi.
-#
-# SuSi is free software: you can redistribute it and/or modify it under 
-# the terms of the GNU General Public License as published by the Free 
-# Software Foundation, either version 3 of the License, or (at your 
-# option) any later version.
-#
-# SuSi is distributed in the hope that it will be useful, but WITHOUT 
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or 
-# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License 
-# for more details.
-#
-# You should have received a copy of the GNU General Public License 
-# along with SuSi. If not, see <https://www.gnu.org/licenses/>. 
-#
-# Neither the names of the EEBE, the Universitat Politecnica de 
-# Catalunya, nor the names of any of the copyright holders of SuSi may 
-# be used to endorse or promote any products derived from this Software 
-# without specific, prior, written permission. 
 #########################################################################
 
 This is the README file of SuSi program
+
+Description
+============
+SuSi (StrUcture SImulation) is a Python-based program designed to construct 
+high-density amorphous polymer matrices, facilitating molecular dynamics 
+simulations of complex polymer systems. Given the challenges of simulating 
+polymers due to their amorphous, heterogeneous, and entangled structures, 
+SuSi helps generate realistic initial configurations by defining system 
+parameters such as box size, and monomer composition. Using an input file 
+with system specifications, it creates a 3D polymer system and outputs atomic
+coordinates in PDB format. The program ensures accurate molecular 
+representation, making it a valuable tool for studying polymer properties at 
+molecular and atomic levels.
+
 
 Prerequisites
 =============
